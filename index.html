@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>A Week Just for You ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background: black;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    padding: 30px;
+    color: white;
+}
+
+.page.active {
+    display: block;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 70%;
+    max-width: 350px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+button {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    background: #ff5fa2;
+    color: white;
+    cursor: pointer;
+}
+
+/* Backgrounds */
+#page0 { background: linear-gradient(135deg,#ff758c,#ff7eb3); }
+#page1 { background: linear-gradient(135deg,#ff9a9e,#fad0c4); }
+#page2 { background: linear-gradient(135deg,#fbc2eb,#a6c1ee); }
+#page3 { background: linear-gradient(135deg,#a1c4fd,#c2e9fb); }
+#page4 { background: linear-gradient(135deg,#fddb92,#d1fdff); }
+#page5 { background: linear-gradient(135deg,#fccb90,#d57eeb); }
+#page6 { background: linear-gradient(135deg,#fda085,#f6d365); }
+#page7 { background: linear-gradient(135deg,#ff758c,#ff7eb3); } /* Kiss Day */
+#page8 { background: linear-gradient(135deg,#000000,#434343); }
+
+/* Video */
+video {
+    width: 90%;
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgm" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Opening -->
+<div class="page active" id="page0">
+    <h1>For You my babayy ❤️</h1>
+    <p>A little surprise because exams stole our time, not my feelings.</p>
+    <button onclick="start()">Enter ❤️</button>
+</div>
+
+<div class="page" id="page1">
+    <h1>Rose Day 🌹</h1>
+    <p>If every rose could express my love for u then all the gardens on the world would still be few.</p>
+    <img src="img1.jpg">
+    <button onclick="next()">Next</button>
+</div>
+
+<div class="page" id="page2">
+    <h1>Propose Day 💍</h1>
+    <p>Forever doesn't mean a year or a century it means lifetime and I will love you forever.</p>
+    <img src="img2.jpg">
+    <button onclick="next()">Next</button>
+</div>
+
+<div class="page" id="page3">
+    <h1>Chocolate Day 🍫</h1>
+    <p>U are as sweet as a chocolate , "U are allergic ok if u eat more i will come and hit u".</p>
+    <img src="img3.jpg">
+    <button onclick="next()">Next</button>
+</div>
+
+<div class="page" id="page4">
+    <h1>Teddy Day 🧸</h1>
+    <p>A softy softy teddy like u is what makes ur hug so comforting.</p>
+    <img src="img4.jpg">
+    <button onclick="next()">Next</button>
+</div>
+
+<div class="page" id="page5">
+    <h1>Promise Day 🤞</h1>
+    <p>I stay. Even when it’s hard.Even if the world changes I am always here to support u </p>
+    <img src="img5.jpg">
+    <button onclick="next()">Next</button>
+</div>
+
+<div class="page" id="page6">
+    <h1>Hug Day 🤍</h1>
+    <p>It feels everything right when u hug me tight</p>
+    <img src="img6.jpg">
+    <button onclick="next()">Next</button>
+</div>
+
+<!-- Added Kiss Day -->
+<div class="page" id="page7">
+    <h1>Kiss Day 💋</h1>
+    <p>Doctors say kissing is good for heart health. So, I will kiss you regularly to keep you fit.hehe and u cant stop me  .</p>
+    <img src="img7.jpg">
+    <button onclick="next()">Next</button>
+</div>
+
+<!-- Valentine shifted -->
+<div class="page" id="page8">
+    <h1>Valentine’s Day ❤️</h1>
+    <p>Roses are red,
+Violets are blue,
+Life feels warmer
+Just knowing you.
+
+Through laughs and late nights,
+Whatever we do,
+My favorite moments
+Are always with you.
+
+Today and always,
+Simple and true
+Happy Valentine’s,
+I choose you 💕</p>
+    <video controls>
+        <source src="final.mp4" type="video/mp4">
+    </video>
+</div>
+
+<script>
+let current = 0;
+const pages = document.querySelectorAll('.page');
+const music = document.getElementById('bgm');
+
+function start() {
+    music.play();
+    pages[current].classList.remove('active');
+    current++;
+    pages[current].classList.add('active');
+}
+
+function next() {
+    pages[current].classList.remove('active');
+    current++;
+    pages[current].classList.add('active');
+}
+</script>
+
+</body>
+</html>
+
+
